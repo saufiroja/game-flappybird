@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet" />
+    <style>
+      canvas {
+        border: 2px solid rgb(255, 255, 255);
+        display: block;
+        margin: 0 auto;
+      }
+
+      body {
+        margin: 20px;
+        padding: 20px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        transition: 0.5s;
+      }
+
+      input[type="checkbox"] {
+        position: relative;
+        width: 40px;
+        height: 20px;
+        appearance: none;
+        background-color: #434343;
+        outline: none;
+        border-radius: 10px;
+        transition: 0.5s ease;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"]:checked {
+        background-color: #3664ff;
+      }
+
+      input[type="checkbox"]::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #fcfcfc;
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+        transition: 0.5s ease;
+      }
+
+      input[type="checkbox"]:checked::before {
+        transform: translate(20px);
+      }
+
+      .dark {
+        background-color: #333333;
+        color: #fcfcfc;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Mode Dark/Light</h3>
+    <input type="checkbox" onclick="ubahMode()" />
+
+    <canvas id="bird" width="320" height="480"></canvas>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
